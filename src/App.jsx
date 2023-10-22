@@ -35,7 +35,10 @@ function App() {
     const chuckFact = fact.value;
     const factNameReplace = chuckFact
       .replaceAll("Chuck Norris", "Boosh")
-      .replaceAll("Chuck", "Boosh");
+      .replaceAll("CHUCK NORRIS", "BOOSH")
+      .replaceAll("Chuck", "Boosh")
+      .replaceAll("Chunk Norris", "Boosh")
+      .replaceAll("Chunk", "Boosh");
     console.log(factNameReplace);
 
     setBooshFact(factNameReplace);
@@ -49,7 +52,7 @@ function App() {
           return (
             <>
               <li key={index}>{reason}</li>
-              <button onClick={() => onDelete(index)}>Delete</button>;
+              <button onClick={() => onDelete(index)}>Delete</button>
             </>
           );
         })}
